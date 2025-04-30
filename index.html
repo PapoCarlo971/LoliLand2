@@ -1,43 +1,165 @@
-<div style="height: 600px;width: auto; background-color:transparent; background-size:100% 100%; display: flex;background-image:url(33.png) ;"> 
-</div>
-<div style=" height: 400px; width:auto; margin-top: 100px; background-color: transparent; display: flex;"> 
-<div style="background-color:darkgray;height: 400px; width: 450px; margin-left: auto;">
-	<img src="team.png" style="width: 450px;height:300px;">
-	<button style="height: 50px ; width : 150px;margin-top: 25px; margin-left:50px">Подробнее</button>
-</div>
-	<div style="background-color:darkgray;height: 400px; width: 450px; margin-left: 20px;">
-	<img src="cabinet.png" style="width: 450px;height:300px;">
-	<button style="height: 50px ; width : 150px;margin-top: 25px; margin-left:50px">Подробнее</button>
-</div>
-<div style="background-color:darkgray;height: 400px; width: 450px; margin-left: 20px; margin-right: auto;">
-	<img src="skins.png" style="width: 450px;height:300px;">
-	<button style="height: 50px ; width : 150px;margin-top: 25px; margin-left:50px">Подробнее</button>
-</div>
-</div>
-<div style="background-color:transparent; height: 550px; width: auto; display: flex; margin-top:100px;"> 
-<div style="background-color: blue;height: 550px; width: 500px; margin-left: auto;">
-	<img src="server_hitech.jpg" style="width: 500px; height:300px;">
-	
-	<p style="color: white; font-family: Arail">Это уникальный индустриальный сервер с большим количеством технических модов. Тут Вы найдете ваши любимые моды, такие как: Industrial Craft 2, Avaritia, Forestry, Applied Energistics 2, Draconic Evolution, а также ещё много чего интересного. Построй свой город с самой мощной электростанцией или лабораторию по производству иридия. Поторопись, твои друзья уже начали строить завод!</p>
-	<div style="height: 50px ; width : 150px; margin-top:50px; margin-left: auto;margin-right: auto; ">
-	<button style="height: 50px ; width : 150px;  ">Перейти</button>
-</div>
- </div>
- <div style="background-color: blue;height: 550px; width: 500px; margin-left: 50px;">
- 	<img src="server_ultra_tech.jpg" style="width: 500px;height: 300px;">
- 	<p style="color: white; font-family: Arail">Сложный сервер на базе технических модов! Изучайте космос, химию, технологии, развейтесь и покорите этот необычный, хардкорный и крайне интересный сервер.</p>
- 	<div style="height: 50px ; width : 150px; margin-top:110px; margin-left: auto;margin-right: auto; ">
- 	<button style="height: 50px ; width : 150px;  ">Перейти</button>
- </div>
- </div>
- <div style="background-color: blue;height: 550px; width: 500px; margin-left: 50px; margin-right: auto;">
- 	<img src="server_magic_rpg.jpg" style="width: 500px;height: 300px;  ">
- 	<p style="color: white; font-family: Arail">Обожаете магию и колдовство? Тогда Вам точно понравится у нас! Сервер наполнен настоящей магией, которую можно встретить на каждом шагу. Интересные и уникальные дополнения к основным модам не заставят Вас скучать! Вас ждут невероятные приключения! Попробуй себя в роли Колдуна или Великого Мага, призови Демона и торгуй с ним. Присоединяйся к нашей группе магов и покажи свою мощь, вперёд к мечте на нашем проекте! </p>
- 	<div style="height: 50px ; width : 150px; margin-top:40px; margin-left: auto;margin-right: auto; ">
- 	<button style="height: 50px ; width : 150px;  ">Перейти</button>
- </div>
- </div>
-</div>
-<div style="height: 600px; background-color: transparent; margin-top: 100px; display: flex; background-image:url(donate.png) ; background-size:100% 100%;width: auto; ">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Игровые серверы</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #f8f9fa;
+        }
 
-</div>
+        /* Banner section */
+        .banner {
+            background-size: cover;
+            background-position: center;
+            min-height: clamp(200px, 50vw, 400px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 1rem;
+        }
+
+        /* Card styles */
+        .feature-card, .server-card {
+            background-color: darkgray;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .server-card {
+            background-color: blue;
+            color: white;
+        }
+
+        .card-img {
+            width: 100%;
+            height: auto;
+            max-height: clamp(200px, 40vw, 300px);
+            object-fit: cover;
+        }
+
+        .card-btn {
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            padding: 0.5rem 1rem;
+            width: clamp(120px, 30vw, 150px);
+            margin: 1rem auto;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .server-card .card-btn {
+            background-color: #0056b3;
+        }
+
+        .server-card p {
+            font-family: Arial, sans-serif;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            padding: 0.5rem 1rem;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* Section styles */
+        .feature-section, .server-section {
+            padding: 2rem 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 575.98px) {
+            .banner {
+                min-height: 150px;
+            }
+
+            .card-img {
+                max-height: 200px;
+            }
+
+            .card-btn {
+                width: 120px;
+                font-size: 0.875rem;
+            }
+
+            .server-card p {
+                font-size: 0.875rem;
+            }
+
+            .feature-section, .server-section {
+                padding: 1rem 0.5rem;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .card-img {
+                max-height: 250px;
+            }
+
+            .card-btn {
+                width: 130px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner 1 -->
+    <div class="banner" style="background-image: url('33.png');"></div>
+
+    <!-- Features Section -->
+    <div class="container feature-section">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 feature-card">
+                <img src="team.png" alt="Команда" class="card-img">
+                <button class="card-btn">Подробнее</button>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 feature-card">
+                <img src="cabinet.png" alt="Личный кабинет" class="card-img">
+                <button class="card-btn">Подробнее</button>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 feature-card">
+                <img src="skins.png" alt="Скины" class="card-img">
+                <button class="card-btn">Подробнее</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Servers Section -->
+    <div class="container server-section">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 server-card">
+                <img src="server_hitech.jpg" alt="HiTech сервер" class="card-img">
+                <p>Это уникальный индустриальный сервер с большим количеством технических модов. Тут Вы найдете ваши любимые моды, такие как: Industrial Craft 2, Avaritia, Forestry, Applied Energistics 2, Draconic Evolution, а также ещё много чего интересного. Построй свой город с самой мощной электростанцией или лабораторию по производству иридия. Поторопись, твои друзья уже начали строить завод!</p>
+                <button class="card-btn">Перейти</button>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 server-card">
+                <img src="server_ultra_tech.jpg" alt="Ultra Tech сервер" class="card-img">
+                <p>Сложный сервер на базе технических модов! Изучайте космос, химию, технологии, развейтесь и покорите этот необычный, хардкорный и крайне интересный сервер.</p>
+                <button class="card-btn">Перейти</button>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 server-card">
+                <img src="server_magic_rpg.jpg" alt="Magic RPG сервер" class="card-img">
+                <p>Обожаете магию и колдовство? Тогда Вам точно понравится у нас! Сервер наполнен настоящей магией, которую можно встретить на каждом шагу. Интересные и уникальные дополнения к основным модам не заставят Вас скучать! Вас ждут невероятные приключения! Попробуй себя в роли Колдуна или Великого Мага, призови Демона и торгуй с ним. Присоединяйся к нашей группе магов и покажи свою мощь, вперёд к мечте на нашем проекте!</p>
+                <button class="card-btn">Перейти</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner 2 -->
+    <div class="banner" style="background-image: url('donate.png');"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
